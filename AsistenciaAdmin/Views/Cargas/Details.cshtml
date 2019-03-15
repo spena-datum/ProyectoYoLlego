@@ -1,0 +1,90 @@
+﻿@model AsistenciaAdmin.Models.Cargas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cargas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHoraCarga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHoraCarga)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoMateria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoMateria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarnetAlumno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarnetAlumno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorreoDocente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoDocente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoAula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoAula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HorarioClase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HorarioClase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciclo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciclo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CargaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

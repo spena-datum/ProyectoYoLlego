@@ -135,9 +135,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AulasController.cs" />
+    <Compile Include="Controllers\CargasController.cs" />
+    <Compile Include="Controllers\ClasesController.cs" />
     <Compile Include="Controllers\EstadosClaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MateriasController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,8 +151,11 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AsistenciaAdminContext.cs" />
     <Compile Include="Models\Aulas.cs" />
+    <Compile Include="Models\Cargas.cs" />
+    <Compile Include="Models\Clases.cs" />
     <Compile Include="Models\EstadosClase.cs" />
     <Compile Include="Models\Materias.cs" />
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -241,6 +247,21 @@
     <Content Include="Views\Materias\Details.cshtml" />
     <Content Include="Views\Materias\Edit.cshtml" />
     <Content Include="Views\Materias\Index.cshtml" />
+    <Content Include="Views\Clases\Create.cshtml" />
+    <Content Include="Views\Clases\Delete.cshtml" />
+    <Content Include="Views\Clases\Details.cshtml" />
+    <Content Include="Views\Clases\Edit.cshtml" />
+    <Content Include="Views\Clases\Index.cshtml" />
+    <Content Include="Views\Cargas\Create.cshtml" />
+    <Content Include="Views\Cargas\Delete.cshtml" />
+    <Content Include="Views\Cargas\Details.cshtml" />
+    <Content Include="Views\Cargas\Edit.cshtml" />
+    <Content Include="Views\Cargas\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

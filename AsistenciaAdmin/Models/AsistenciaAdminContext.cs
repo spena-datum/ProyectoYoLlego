@@ -24,5 +24,11 @@ namespace AsistenciaAdmin.Models
         public System.Data.Entity.DbSet<AsistenciaAdmin.Models.EstadosClase> EstadosClase { get; set; }
 
         public System.Data.Entity.DbSet<AsistenciaAdmin.Models.Materias> Materias { get; set; }
+
+        public System.Data.Entity.DbSet<AsistenciaAdmin.Models.Cargas> Cargas { get; set; }
+
+        public System.Data.Entity.DbSet<AsistenciaAdmin.Models.Clases> Clases { get; set; }
+
+        public System.Data.Entity.DbSet<AsistenciaAdmin.Models.Usuarios> Usuarios { get; set; }
     }
 }
