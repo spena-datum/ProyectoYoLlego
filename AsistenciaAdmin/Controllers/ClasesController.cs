@@ -17,7 +17,8 @@ namespace AsistenciaAdmin.Controllers
         // GET: Clases
         public ActionResult Index()
         {
-            return View(db.Clases.ToList());
+            var clases = db.Clases.Include(c => c.Aulas).Include(c => c.Cargas).Include(c => c.EstadosClase).Include(c => c.Materias).Include(c => c.Usuarios);
+            return View(clases.ToList());
         }
 
         // GET: Clases/Details/5
@@ -38,6 +39,11 @@ namespace AsistenciaAdmin.Controllers
         // GET: Clases/Create
         public ActionResult Create()
         {
+            ViewBag.AulaId = new SelectList(db.Aulas, "AulaId", "NombreAula");
+            ViewBag.CargaId = new SelectList(db.Cargas, "CargaId", "UsuarioId");
+            ViewBag.EstadoClaseId = new SelectList(db.EstadosClase, "EstadoClaseId", "Estado");
+            ViewBag.MateriaId = new SelectList(db.Materias, "MateriaId", "Codigo");
+            ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "Nombre");
             return View();
         }
 
@@ -55,6 +61,11 @@ namespace AsistenciaAdmin.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.AulaId = new SelectList(db.Aulas, "AulaId", "NombreAula", clases.AulaId);
+            ViewBag.CargaId = new SelectList(db.Cargas, "CargaId", "UsuarioId", clases.CargaId);
+            ViewBag.EstadoClaseId = new SelectList(db.EstadosClase, "EstadoClaseId", "Estado", clases.EstadoClaseId);
+            ViewBag.MateriaId = new SelectList(db.Materias, "MateriaId", "Codigo", clases.MateriaId);
+            ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "Nombre", clases.UsuarioId);
             return View(clases);
         }
 
@@ -70,6 +81,11 @@ namespace AsistenciaAdmin.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.AulaId = new SelectList(db.Aulas, "AulaId", "NombreAula", clases.AulaId);
+            ViewBag.CargaId = new SelectList(db.Cargas, "CargaId", "UsuarioId", clases.CargaId);
+            ViewBag.EstadoClaseId = new SelectList(db.EstadosClase, "EstadoClaseId", "Estado", clases.EstadoClaseId);
+            ViewBag.MateriaId = new SelectList(db.Materias, "MateriaId", "Codigo", clases.MateriaId);
+            ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "Nombre", clases.UsuarioId);
             return View(clases);
         }
 
@@ -86,6 +102,11 @@ namespace AsistenciaAdmin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.AulaId = new SelectList(db.Aulas, "AulaId", "NombreAula", clases.AulaId);
+            ViewBag.CargaId = new SelectList(db.Cargas, "CargaId", "UsuarioId", clases.CargaId);
+            ViewBag.EstadoClaseId = new SelectList(db.EstadosClase, "EstadoClaseId", "Estado", clases.EstadoClaseId);
+            ViewBag.MateriaId = new SelectList(db.Materias, "MateriaId", "Codigo", clases.MateriaId);
+            ViewBag.UsuarioId = new SelectList(db.Usuarios, "UsuarioId", "Nombre", clases.UsuarioId);
             return View(clases);
         }
 

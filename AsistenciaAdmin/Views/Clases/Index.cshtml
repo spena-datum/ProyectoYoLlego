@@ -12,16 +12,19 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EstadoClaseId)
+            @Html.DisplayNameFor(model => model.Aulas.NombreAula)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AulaId)
+            @Html.DisplayNameFor(model => model.Cargas.UsuarioId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UsuarioId)
+            @Html.DisplayNameFor(model => model.EstadosClase.Estado)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CargaId)
+            @Html.DisplayNameFor(model => model.Materias.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombre)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FechaHoraAsistencia)
@@ -38,25 +41,25 @@
         <th>
             @Html.DisplayNameFor(model => model.FechaHoraInicio)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MateriaId)
-        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.EstadoClaseId)
+            @Html.DisplayFor(modelItem => item.Aulas.NombreAula)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AulaId)
+            @Html.DisplayFor(modelItem => item.Cargas.UsuarioId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UsuarioId)
+            @Html.DisplayFor(modelItem => item.EstadosClase.Estado)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CargaId)
+            @Html.DisplayFor(modelItem => item.Materias.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FechaHoraAsistencia)
@@ -72,9 +75,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FechaHoraInicio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MateriaId)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ClaseId }) |
