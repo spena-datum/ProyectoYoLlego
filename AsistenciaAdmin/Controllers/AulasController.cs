@@ -2,6 +2,7 @@
 {
     using AsistenciaAdmin.Models;
     using QRCoder;
+    using System;
     using System.Data.Entity;
     using System.Drawing;
     using System.IO;
@@ -128,20 +129,22 @@
 
             var nombreAula = db.Aulas.Find(AulaId).NombreAula;
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(nombreAula, QRCodeGenerator.ECCLevel.Q);
+            DateTime hoy = DateTime.Now.ToUniversalTime().AddHours(-6);
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode($"({nombreAula}/{hoy})", QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
+            QR newQR = new QR();
             using (Bitmap bitMap = qrCode.GetGraphic(20))
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    bitMap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    QR newQR = new QR();
-
-                    ViewBag.imageBytes = ms.ToArray();
+                    bitMap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);   
+                    newQR.TextoQR = ms.ToArray();
+                    newQR.Aula = nombreAula;
+                    //ViewBag.imageBytes = ms.ToArray();
                     //imgBarCode.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(byteImage);
                 }
             }
-            return View(ViewBag);
+            return View(newQR);
         }
 
 

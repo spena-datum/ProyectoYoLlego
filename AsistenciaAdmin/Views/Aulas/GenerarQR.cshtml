@@ -1,12 +1,10 @@
-﻿@*@{
-    ViewBag.Title = "GenerarQR";
-}*@
+﻿@model AsistenciaAdmin.Models.QR
 
-<h2>Aula @Model</h2>
+<h2>Aula @Model.Aula</h2>
 
-@if (ViewBag != null)
+@if (Model != null)
 {
-    
-    <img src="@String.Format("data:image/png;base64,{0}", Convert.ToBase64String(ViewBag.imageBytes))" />
+
+    <img src="@String.Format("data:image/png;base64,{0}", Convert.ToBase64String(Model.TextoQR))" />
 }
 

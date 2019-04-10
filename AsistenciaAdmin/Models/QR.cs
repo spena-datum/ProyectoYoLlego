@@ -7,7 +7,7 @@
 
     public class QR
     {
-        public byte [] Aula { get; set; }
-        public string NombreAula { get; set; }
+        public byte [] TextoQR { get; set; }
+        public string Aula { get; set; }
     }
 }
