@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AsistenciaAdmin.Models;
-
-namespace AsistenciaAdmin.Controllers
+﻿namespace AsistenciaAdmin.Controllers
 {
+    using Models;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Net;
+    using System.Web.Mvc;
     public class ClasesController : Controller
     {
         private AsistenciaAdminContext db = new AsistenciaAdminContext();

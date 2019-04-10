@@ -1,7 +1,10 @@
 ﻿namespace AsistenciaAdmin.Controllers
 {
     using AsistenciaAdmin.Models;
+    using QRCoder;
     using System.Data.Entity;
+    using System.Drawing;
+    using System.IO;
     using System.Linq;
     using System.Net;
     using System.Web.Mvc;
@@ -110,6 +113,38 @@
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult GenerarQR(int? AulaId)
+        {
+            if (AulaId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Aulas aula = db.Aulas.Find(AulaId);
+            if (aula == null)
+            {
+                return HttpNotFound();
+            }
+
+            var nombreAula = db.Aulas.Find(AulaId).NombreAula;
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(nombreAula, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            using (Bitmap bitMap = qrCode.GetGraphic(20))
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    bitMap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    QR newQR = new QR();
+
+                    ViewBag.imageBytes = ms.ToArray();
+                    //imgBarCode.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(byteImage);
+                }
+            }
+            return View(ViewBag);
+        }
+
+
 
         protected override void Dispose(bool disposing)
         {

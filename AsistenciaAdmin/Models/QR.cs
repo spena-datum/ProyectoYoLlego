@@ -7,6 +7,7 @@
 
     public class QR
     {
-        
+        public byte [] Aula { get; set; }
+        public string NombreAula { get; set; }
     }
 }

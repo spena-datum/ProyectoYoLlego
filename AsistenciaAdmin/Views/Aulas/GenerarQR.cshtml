@@ -1,0 +1,12 @@
+﻿@*@{
+    ViewBag.Title = "GenerarQR";
+}*@
+
+<h2>Aula @Model</h2>
+
+@if (ViewBag != null)
+{
+    
+    <img src="@String.Format("data:image/png;base64,{0}", Convert.ToBase64String(ViewBag.imageBytes))" />
+}
+

@@ -23,11 +23,11 @@
             @Html.DisplayFor(modelItem => item.NombreAula)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AulaId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AulaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AulaId })
+            @*@Html.ActionLink("QR","GenerarQR","Aulas", new { Aula = item.AulaId}, new { @class = "btn btn-default form-control"})*@
+            <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("GenerarQR", "Aulas", new { AulaId = item.AulaId })'">QR</button>
         </td>
     </tr>
 }
 
 </table>
+
