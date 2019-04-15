@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:YoLlegoApp"
+             x:Class="YoLlegoApp.MainPage">
+
+    <StackLayout Spacing="10">
+        <!-- Place new controls here -->
+        <Label
+            Text="YoLLego! App"
+            FontAttributes="Bold"
+            FontSize="Large"/>
+        <Label 
+            Text="Mis próximas clases:"/>
+        <ListView>
+            
+        </ListView>
+        <Button 
+            Text="Marcar asistencia"
+            x:Name="marcarAsistencia"/>
+        
+    </StackLayout>
+
+</ContentPage>
