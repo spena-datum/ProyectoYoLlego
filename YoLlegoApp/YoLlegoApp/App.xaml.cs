@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace YoLlegoApp
 {
@@ -11,7 +12,7 @@ namespace YoLlegoApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new HamburguerMenu();
         }
 
         protected override void OnStart()

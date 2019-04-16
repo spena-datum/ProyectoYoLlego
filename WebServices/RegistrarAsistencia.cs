@@ -38,8 +38,9 @@ namespace WebServices
 
 
                     var c = command.ExecuteReader();
-                    o = c.RecordsAffected.ToString();
-                  
+                    o = $"{c.RecordsAffected} RecorsAffected";
+
+
                 }
             }
 
