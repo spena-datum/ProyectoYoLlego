@@ -20,12 +20,11 @@ namespace YoLlegoApp
 
         public void MyMenu()
         {
-            Detail = new NavigationPage(new Clases());
+            Detail = new NavigationPage(new Principal());
             List<Menu> menu = new List<Menu>
             {
-                new Menu{ Page= new Clases(),MenuTitle="My Profile",  MenuDetail="Mi perfil",icon="user.png"},
-                new Menu{ Page= new Clases(),MenuTitle="Messages",  MenuDetail="Mensajes",icon="message.png"},
-                new Menu{ Page= new Clases(),MenuTitle="Contacts",  MenuDetail="Contactos",icon="contacts.png"},
+                new Menu{ Page= new Clases(),MenuTitle="My Profile",  MenuDetail="Inicio",icon="user.png"},
+                new Menu{ Page= new Clases(),MenuTitle="Messages",  MenuDetail="Mis clases",icon="message.png"},
                 new Menu{ Page= new Clases(),MenuTitle="Settings",  MenuDetail="Configuración",icon="settings.png"}
             };
             ListMenu.ItemsSource = menu;

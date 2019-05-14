@@ -1,20 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="YoLlegoApp.Clases">
+             x:Class="YoLlegoApp.Principal">
     <ContentPage.Content>
         <StackLayout>
-            <ListView 
-                x:Name="ProximasClases">
+            <Label Text="Mis clases de este día"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <ListView
+                x:Name="ListClasesHoy">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell
-                            Text="Estandares de programacion"
-                            Detail="FM-304">
-                        </TextCell>
+                            Text="Estándares de programacion"
+                            Detail="FM-304"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button
+                Text="Escanear QR"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
