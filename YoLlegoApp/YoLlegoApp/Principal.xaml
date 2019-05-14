@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="YoLlegoApp.Principal">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Mis clases de este día"
+        <StackLayout
+            BackgroundColor="WhiteSmoke"
+            Padding="5,20,5,20">
+            <Label 
+                Text="YoLlegoApp!"
+                TextColor="#5d0a28"
+                FontSize="30"
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Image
+                Source="logo-utec.png"
+                WidthRequest="100"/>
             <ListView
                 x:Name="ListClasesHoy">
                 <ListView.ItemTemplate>
@@ -18,7 +26,12 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Button
-                Text="Escanear QR"/>
+                Text="Escanear QR"
+                Command="{Binding ButtonCommand}"/>
+            <Label 
+                Text="{Binding Result}" 
+                HorizontalOptions="Center" 
+                VerticalOptions="StartAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

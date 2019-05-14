@@ -23,9 +23,9 @@ namespace YoLlegoApp
             Detail = new NavigationPage(new Principal());
             List<Menu> menu = new List<Menu>
             {
-                new Menu{ Page= new Clases(),MenuTitle="My Profile",  MenuDetail="Inicio",icon="user.png"},
-                new Menu{ Page= new Clases(),MenuTitle="Messages",  MenuDetail="Mis clases",icon="message.png"},
-                new Menu{ Page= new Clases(),MenuTitle="Settings",  MenuDetail="Configuración",icon="settings.png"}
+                new Menu{ Page= new Principal(),MenuTitle="Inicio"},
+                new Menu{ Page= new Principal(),MenuTitle="Mis Clases"},
+                new Menu{ Page= new Principal(),MenuTitle="Mis Justificaciones"}
             };
             ListMenu.ItemsSource = menu;
         }

@@ -13,6 +13,7 @@ namespace YoLlegoApp
             InitializeComponent();
 
             MainPage = new HamburguerMenu();
+            
         }
 
         protected override void OnStart()

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using YoLlegoApp.ViewModel;
 
 namespace YoLlegoApp
 {
@@ -15,7 +16,7 @@ namespace YoLlegoApp
 		public Principal ()
 		{
 			InitializeComponent ();
-            
+            this.BindingContext = new PrincipalViewModel();
         }
 	}
 }
