@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Geolocator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -100,6 +101,7 @@ namespace YoLlegoApp.ViewModel
                     }
                     else
                     {
+                        
                         Result = $"Result: {result.Text}";
                     }
                 });
