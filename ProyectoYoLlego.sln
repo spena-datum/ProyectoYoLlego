@@ -5,15 +5,13 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsistenciaAdmin", "AsistenciaAdmin\AsistenciaAdmin.csproj", "{4AE57D4B-C52E-4200-860D-49A1E293F119}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServices", "WebServices\WebServices.csproj", "{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClasesLibrary", "ClasesLibrary\ClasesLibrary.csproj", "{0C449F0D-B9F0-4ED8-8DF3-98FAB3059ED2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoLlegoApp.Android", "YoLlegoApp\YoLlegoApp.Android\YoLlegoApp.Android.csproj", "{F5C2E905-5537-4689-9222-7BA193AB36ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoLlegoApp.iOS", "YoLlegoApp\YoLlegoApp.iOS\YoLlegoApp.iOS.csproj", "{0EA9B1F4-6C71-4C7B-8ED7-3896104F618B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoLlegoApp", "YoLlegoApp\YoLlegoApp\YoLlegoApp.csproj", "{81651B38-232C-4ECA-A109-70F3FA5B4E85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoLlegoApp", "YoLlegoApp\YoLlegoApp\YoLlegoApp.csproj", "{81651B38-232C-4ECA-A109-70F3FA5B4E85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,30 +53,6 @@ Global
 		{4AE57D4B-C52E-4200-860D-49A1E293F119}.Release|iPhone.Build.0 = Release|Any CPU
 		{4AE57D4B-C52E-4200-860D-49A1E293F119}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4AE57D4B-C52E-4200-860D-49A1E293F119}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.AppStore|Any CPU.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.AppStore|iPhone.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Release|iPhone.Build.0 = Release|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{23E9B539-6A9E-4E6C-AE98-F2ADEEF93976}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{0C449F0D-B9F0-4ED8-8DF3-98FAB3059ED2}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
 		{0C449F0D-B9F0-4ED8-8DF3-98FAB3059ED2}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
 		{0C449F0D-B9F0-4ED8-8DF3-98FAB3059ED2}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
