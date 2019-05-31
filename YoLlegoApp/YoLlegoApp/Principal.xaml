@@ -13,8 +13,8 @@
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Image
-                Source="logo-utec.png"
-                WidthRequest="100"/>
+                Source="logoutec.jpg"
+                WidthRequest="200"/>
             <ListView
                 x:Name="ListClasesHoy">
                 <ListView.ItemTemplate>

@@ -11,4 +11,4 @@ namespace YoLlegoApp.Models
         public object Result { get; set; }
     }
 }
-}
+

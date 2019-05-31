@@ -24,8 +24,7 @@ namespace YoLlegoApp
             List<Menu> menu = new List<Menu>
             {
                 new Menu{ Page= new Principal(),MenuTitle="Inicio"},
-                new Menu{ Page= new Principal(),MenuTitle="Mis Clases"},
-                new Menu{ Page= new Principal(),MenuTitle="Mis Justificaciones"}
+                new Menu{ Page= new Principal(),MenuTitle="Mis Clases"}
             };
             ListMenu.ItemsSource = menu;
         }
