@@ -7,11 +7,16 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AsistenciaAdmin.Models;
+using System.IO;
+using NPOI.HSSF.UserModel;
+using AsistenciaAdmin.Services;
 
 namespace AsistenciaAdmin.Controllers
 {
     public class CargasController : Controller
     {
+        private string fileSavedPath = "~/";
+        private NPServices ServicesNP = new NPServices();
         private AsistenciaAdminContext db = new AsistenciaAdminContext();
 
         // GET: Cargas
@@ -113,6 +118,37 @@ namespace AsistenciaAdmin.Controllers
             db.Cargas.Remove(cargas);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult ImportarExcel(HttpPostedFileBase file)
+        {
+            string message;
+            if (file != null && file.ContentLength > 0 && file.ContentLength < (10 * 1024 * 1024))
+            {
+                string filetype = file.FileName.Split('.').Last();
+                string fileName = Path.GetFileName(file.FileName);
+                string path = Path.Combine(Server.MapPath("~/Archivos"), fileName);
+                if (filetype == "xls")
+                {
+                    file.SaveAs(path);
+                    FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+                    HSSFWorkbook excel = new HSSFWorkbook(fs);
+
+                    message = ServicesNP.InsertDataExcel(excel);
+                }
+                else
+                {
+                    message = "Formato invalido !";
+                }
+            }
+            else
+            {
+                message = "Porfavor seleccione un archivo !";
+            }
+            ViewBag.Message = message;
+
+            return View();
         }
 
         protected override void Dispose(bool disposing)

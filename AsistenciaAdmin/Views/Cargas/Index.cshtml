@@ -6,10 +6,24 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<div class="row">
+    <div class="col-4">
+        <a href="@Url.Action("Create", "Cargas")" class="btn btn-outline-primary">Crear</a>
+    </div>
+    <div class="col-4">
+        <form id="UploadForm" action="@Url.Action("ImportarExcel", "Cargas")" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Importar Excel:</label>
+                <input type="file" name="file" id="file" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Import Excel" class="btn btn-outline-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.UsuarioId)
